@@ -1,6 +1,7 @@
 import 'package:client/modules/mod-auth/views/forgot_password.dart';
 import 'package:client/modules/mod-auth/views/pick_role.dart';
 import 'package:client/modules/mod-auth/views/verification_code.dart';
+import 'package:client/modules/mod_admin/mod_admin.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
@@ -12,6 +13,7 @@ import 'core/shared_service/form_validation_service.dart';
 import 'main.dart';
 import 'modules/mod-auth/views/phone_number.dart';
 import 'modules/mod-auth/views/sign_up_view.dart';
+import 'modules/mod_admin/buisness_setup/views/choose_service.dart';
 import 'modules/mod_admin/home/view/home_view.dart';
 
 
@@ -38,5 +40,6 @@ class AppModule extends MainModule {
         Router("/phoneNumber", child: (_, args) => PhoneNumberView()),
         Router("/code", child: (_, args) => VerificationCodeView()),
         Router('/forgotPassword', child: (_, args) => ForgotPasswordView()),
+        Router('/adminHome', module: AdminModule()),
       ];
 }

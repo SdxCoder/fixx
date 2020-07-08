@@ -11,3 +11,15 @@ class DatePickerType{
    static String range = "By Range";
    static String week = "By Week";
 }
+
+List<String> services = [
+  "Salon",
+  "Dentist",
+  "Yoga",
+  "Shef",
+  "Plumber",
+  "Cleaner",
+  "Baby Sitter",
+  "Driver",
+
+];

@@ -24,14 +24,5 @@ Widget buildAppBar(
     automaticallyImplyLeading: automaticallyImplyLeading,
     bottom: bottom,
     actions: actions 
-    // ??  <Widget>[
-      // Modular.get<AuthService>().currentUser.user != null ? 
-      // IconButton(
-      //   color: const Color(0xff3e3f68),
-      //   icon: Icon(Icons.person), onPressed: (){
-      //   Modular.to.pushNamed(Routes.profile);
-      // })
-      // : Offstage() 
-    // ],
   );
 }

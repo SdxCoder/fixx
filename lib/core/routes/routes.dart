@@ -7,11 +7,16 @@ class Routes{
   static const String forgotPassword = "/forgotPassword"; 
    static const String phoneNumber = "/phoneNumber"; 
    static const String code = "/code";
+ 
   static const String adminHome = "/adminHome"; 
+  static const String chooseService = "$adminHome/chooseService";
+  static String serviceDetails =  "$adminHome/serviceDetails";
  
 
   // user home routes
-  static const String userHome = "/userHome";  // user home
+  static const String userHome = "/userHome";
+
+    // user home
 // static const String scan = "$userHome/scan";
 
   
