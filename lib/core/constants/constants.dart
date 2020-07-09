@@ -1,4 +1,6 @@
 
+import 'package:client/core/models/buisness_hours.dart';
+
 const imageUrl = 'https://png.pngtree.com/element_our/png/20181206/users-vector-icon-png_260862.jpg';
 
 class Role{
@@ -11,6 +13,46 @@ class DatePickerType{
    static String range = "By Range";
    static String week = "By Week";
 }
+
+
+List<BuisnessHours> businessHoursList = [
+  BuisnessHours(
+    day: "Monday",
+    from:"-- : --",
+    to:"-- : --",
+  ),
+   BuisnessHours(
+    day: "Tuesday",
+    from:"-- : --",
+    to:"-- : --",
+  ),
+   BuisnessHours(
+    day: "Wednesday",
+    from:"-- : --",
+    to:"-- : --",
+  ),
+   BuisnessHours(
+    day: "Thursday",
+    from:"-- : --",
+    to:"-- : --",
+  ),
+   BuisnessHours(
+    day: "Friday",
+    from:"-- : --",
+    to:"-- : --",
+  ),
+   BuisnessHours(
+    day: "Saturday",
+    from:"-- : --",
+    to:"-- : --",
+  ),
+   BuisnessHours(
+    day: "Sunday",
+    from:"-- : --",
+    to:"-- : --",
+  ),
+  
+];
 
 List<String> services = [
   "Salon",

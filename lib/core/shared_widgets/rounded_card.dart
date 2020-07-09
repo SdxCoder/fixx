@@ -22,6 +22,7 @@ class RoundedCard extends StatelessWidget {
       width: width,
       height: height,
       child: Card(
+          
           elevation: 0,
           color: cardColor,
           shape: RoundedRectangleBorder(

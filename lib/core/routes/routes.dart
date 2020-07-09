@@ -11,6 +11,7 @@ class Routes{
   static const String adminHome = "/adminHome"; 
   static const String chooseService = "$adminHome/chooseService";
   static String serviceDetails =  "$adminHome/serviceDetails";
+    static String addEmployee =  "$adminHome/addEmployee";
  
 
   // user home routes
