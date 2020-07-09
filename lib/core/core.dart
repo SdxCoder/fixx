@@ -11,6 +11,9 @@ export './extensions/extension.dart';
 
 export './models/current_user.dart';
 export './models/user.dart';
+export './models/service.dart';
+export './models/employee.dart';
+export './models/buisness_hours.dart';
 
 // shared services export
 export './shared_service/auth_service.dart';

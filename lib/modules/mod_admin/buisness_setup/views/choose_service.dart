@@ -29,7 +29,7 @@ class _ChooseServiceViewState extends State<ChooseServiceView> {
               children: [
                 GridView.count(
                   shrinkWrap: true,
-                  mainAxisSpacing: 16,
+                  mainAxisSpacing: 8,
                   crossAxisSpacing: 16,
                   childAspectRatio: 1.3,
                   crossAxisCount: 2, children: [

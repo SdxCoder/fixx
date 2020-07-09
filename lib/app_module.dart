@@ -13,8 +13,8 @@ import 'core/shared_service/form_validation_service.dart';
 import 'main.dart';
 import 'modules/mod-auth/views/phone_number.dart';
 import 'modules/mod-auth/views/sign_up_view.dart';
-import 'modules/mod_admin/buisness_setup/views/choose_service.dart';
-import 'modules/mod_admin/home/view/home_view.dart';
+import 'modules/mod_admin/home/view/admin_home_view.dart';
+
 
 
 class AppModule extends MainModule {

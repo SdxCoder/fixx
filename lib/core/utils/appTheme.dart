@@ -21,7 +21,7 @@ class AppTheme {
       bodyText2: base.bodyText2.copyWith(color: HexColor("#D3D3D3"),fontFamily: fontName),
       bodyText1: base.bodyText1.copyWith(color: HexColor("#D3D3D3"),fontFamily: fontName),
       subtitle2: base.subtitle2.copyWith(fontFamily: fontName),
-      subtitle1: base.subtitle1.copyWith(fontFamily: fontName),
+      subtitle1: base.subtitle1.copyWith(color: HexColor("#D3D3D3"), fontFamily: fontName),
       button: base.headline6.copyWith(color: Colors.white,fontFamily: fontName),
       caption: base.headline6.copyWith(color: HexColor("#D3D3D3"), fontFamily: fontName),
       overline: base.headline6.copyWith(color: HexColor("#D3D3D3"), fontFamily: fontName),

@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 class BottomNavBar extends StatelessWidget {
@@ -14,26 +13,24 @@ class BottomNavBar extends StatelessWidget {
     return SizedBox(
       height:
           //Platform.isAndroid ?
-          kBottomNavigationBarHeight,
+          kBottomNavigationBarHeight + 8,
       //: 77,
-      child: Material(
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.only(
-            topLeft: Radius.circular(25),
-            topRight: Radius.circular(25),
-          ),
+      child: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Material(
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+          color: Theme.of(context).accentColor,
+          child: BottomNavigationBar(
+              type: BottomNavigationBarType.fixed,
+              backgroundColor: Colors.transparent,
+              elevation: 0,
+              currentIndex: currentIndex,
+              iconSize: 16,
+              unselectedItemColor: Colors.white54,
+              selectedItemColor: Colors.white,
+              onTap: onTap,
+              items: navItems),
         ),
-        color: Colors.white,
-        child: BottomNavigationBar(
-        
-            backgroundColor: Colors.transparent,
-            elevation: 0,
-            currentIndex: currentIndex,
-            iconSize: 16,
-            unselectedItemColor: Theme.of(context).accentColor,
-            selectedItemColor: Theme.of(context).primaryColor,
-            onTap: onTap,
-            items: navItems),
       ),
     );
   }

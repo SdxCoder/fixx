@@ -4,12 +4,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
-class AddServiceDetailsView extends StatefulWidget {
+class AddServiceView extends StatefulWidget {
   @override
-  _AddServiceDetailsViewState createState() => _AddServiceDetailsViewState();
+  _AddServiceViewState createState() => _AddServiceViewState();
 }
 
-class _AddServiceDetailsViewState extends State<AddServiceDetailsView> {
+class _AddServiceViewState extends State<AddServiceView> {
   @override
   Widget build(BuildContext context) {
     return ResponsiveBuilder(
@@ -31,7 +31,7 @@ class _AddServiceDetailsViewState extends State<AddServiceDetailsView> {
                     padding: const EdgeInsets.only(left: 16.0),
                     child: Text("Buisness Details",
                         style: Theme.of(context).textTheme.subtitle1.copyWith(
-                            color: Colors.white, fontWeight: FontWeight.bold)),
+                            fontWeight: FontWeight.bold)),
                   ),
                   SizedBox(
                     height: 16,
@@ -47,24 +47,18 @@ class _AddServiceDetailsViewState extends State<AddServiceDetailsView> {
                             backgroundColor: Colors.transparent,
                             hintText: "Buisness Name",
                           ),
-                          Divider(
-                            color: Theme.of(context).primaryColor,
-                          ),
+                           SizedBox(height:8),
                           TextFieldCustom(
                             backgroundColor: Colors.transparent,
                             hintText: "Address",
                           ),
-                          Divider(
-                            color: Theme.of(context).primaryColor,
-                          ),
+                           SizedBox(height:8),
                           TextFieldCustom(
                             backgroundColor: Colors.transparent,
                             hintText: "Telephone No",
                           ),
 
-                          Divider(
-                            color: Theme.of(context).primaryColor,
-                          ),
+                           SizedBox(height:8),
                           TextFieldCustom(
                             backgroundColor: Colors.transparent,
                             hintText: "Description",
@@ -136,7 +130,7 @@ class _AddServiceDetailsViewState extends State<AddServiceDetailsView> {
                     padding: const EdgeInsets.only(left: 16.0),
                     child: Text("Buisness Hours",
                         style: Theme.of(context).textTheme.subtitle1.copyWith(
-                            color: Colors.white, fontWeight: FontWeight.bold)),
+                            fontWeight: FontWeight.bold)),
                   ),
                   SizedBox(
                     height: 16,
@@ -145,19 +139,16 @@ class _AddServiceDetailsViewState extends State<AddServiceDetailsView> {
                   SizedBox(
                     height: 16,
                   ),
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: SizedBox(
-                      width: media.screenSize.width,
-                      height: 48,
-                      child: raisedButton(
-                          widget: Text(
-                            "NEXT",
-                          ),
-                          onPressed: () async {
-                            Modular.to.pushNamed(Routes.addEmployee);
-                          }),
-                    ),
+                  SizedBox(
+                    width: media.screenSize.width,
+                    height: 48,
+                    child: raisedButton(
+                        widget: Text(
+                          "NEXT",
+                        ),
+                        onPressed: () async {
+                          Modular.to.pushNamed(Routes.addEmployee);
+                        }),
                   ),
                 ],
               ),

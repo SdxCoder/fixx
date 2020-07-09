@@ -140,6 +140,7 @@ class _AddEmployeeViewState extends State<AddEmployeeView> {
                       height: 16,
                     ),
                     RoundedCard(
+                       circularRadius: 10,
                       cardColor: Colors.white,
                       content: ListTile(
                         title: Text(
@@ -193,7 +194,7 @@ class _AddEmployeeViewState extends State<AddEmployeeView> {
                               "NEXT",
                             ),
                             onPressed: () async {
-                              Modular.to.pushNamed(Routes.serviceDetails);
+                              Modular.to.pushNamed(Routes.serviceAppointment);
                             }),
                       ),
                   ],

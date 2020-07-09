@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 class TopNavBar extends StatelessWidget {
   final List<Widget> actions;
   final List<Widget> title;
@@ -15,47 +14,42 @@ class TopNavBar extends StatelessWidget {
     return SafeArea(
       child: Row(
         children: [
-          // Column(
-          //   crossAxisAlignment: CrossAxisAlignment.start,
-          //   mainAxisSize: MainAxisSize.min,
-          //   mainAxisAlignment: MainAxisAlignment.center,
-          //   children: title ?? [
-          //     Text(
-          //       'Find',
-          //       style: headline6.copyWith(
-                 
-          //       ),
-          //     ),
-          //     Text('Tutor',
-          //         style: headline5.copyWith(
-          //             height: 1, fontWeight: FontWeight.bold)),
-          //   ],
-          // ),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisSize: MainAxisSize.min,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: title ??
+                [
+                  Text(
+                    _salutation(),
+                    style: Theme.of(context).textTheme.caption,
+                  ),
+                  Text(
+                    'HARRIET SALON',
+                    style: Theme.of(context)
+                        .textTheme
+                        .headline6
+                        .copyWith(fontWeight: FontWeight.bold),
+                  ),
+                ],
+          ),
           Spacer(),
           ...actions,
-          // Padding(
-          //   padding: EdgeInsets.all(8),
-          //   child: IconButton(
-          //       iconSize: ScreenUtil().setSp(60),
-          //       icon: Icon(Icons.search),
-          //       onPressed: onTapSearch),
-          // ),
-          // GestureDetector(
-          //   onTap: () {
-             
-          //   },
-          //   child: CircleAvatar(
-          //     backgroundImage: NetworkImage(
-          //       Modular.get<AuthService>().currentUser.user.photoUrl ??
-          //           Modular.get<AuthService>()
-          //               .currentUser
-          //               .user
-          //               .photoPlaceholder,
-          //     ),
-          //   ),
-          // ),
         ],
       ),
     );
+  }
+
+  String _salutation() {
+    print(TimeOfDay.now().hour);
+    if (TimeOfDay.now().hour >= 6 && TimeOfDay.now().hour <= 11) {
+      return "☀️ Good Morning..!";
+    }
+
+    if (TimeOfDay.now().hour >= 12 && TimeOfDay.now().hour < 18) {
+      return "☀️ Good After Noon..!";
+    }
+
+    return "🌙 Good Evening..!";
   }
 }

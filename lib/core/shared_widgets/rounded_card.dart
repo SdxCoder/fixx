@@ -22,7 +22,7 @@ class RoundedCard extends StatelessWidget {
       width: width,
       height: height,
       child: Card(
-          
+          margin: EdgeInsets.symmetric(vertical: 8),
           elevation: 0,
           color: cardColor,
           shape: RoundedRectangleBorder(
@@ -59,6 +59,7 @@ class RoundedCardTapable extends StatelessWidget {
         height: height,
         child: Card(
           color: cardColor,
+           margin: EdgeInsets.symmetric(vertical: 8),
             elevation: 0,
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(circularRadius)),
