@@ -1,57 +1,61 @@
-
 import 'package:client/core/models/buisness_hours.dart';
 
-const imageUrl = 'https://png.pngtree.com/element_our/png/20181206/users-vector-icon-png_260862.jpg';
+const imageUrl =
+    'https://png.pngtree.com/element_our/png/20181206/users-vector-icon-png_260862.jpg';
 
-class Role{
+class Role {
   static String professional = "Professional";
   static String user = "User";
 }
 
-class DatePickerType{
-   static String date = "By Date";
-   static String range = "By Range";
-   static String week = "By Week";
+class DatePickerType {
+  static String date = "By Date";
+  static String range = "By Range";
+  static String week = "By Week";
 }
 
+class NotificationType {
+  static String pending = "pending";
+  static String approved = "request";
+  static String completed = "completed";
+}
 
 List<BuisnessHours> businessHoursList = [
   BuisnessHours(
     day: "Monday",
-    from:"-- : --",
-    to:"-- : --",
+    from: "-- : --",
+    to: "-- : --",
   ),
-   BuisnessHours(
+  BuisnessHours(
     day: "Tuesday",
-    from:"-- : --",
-    to:"-- : --",
+    from: "-- : --",
+    to: "-- : --",
   ),
-   BuisnessHours(
+  BuisnessHours(
     day: "Wednesday",
-    from:"-- : --",
-    to:"-- : --",
+    from: "-- : --",
+    to: "-- : --",
   ),
-   BuisnessHours(
+  BuisnessHours(
     day: "Thursday",
-    from:"-- : --",
-    to:"-- : --",
+    from: "-- : --",
+    to: "-- : --",
   ),
-   BuisnessHours(
+  BuisnessHours(
     day: "Friday",
-    from:"-- : --",
-    to:"-- : --",
+    from: "-- : --",
+    to: "-- : --",
   ),
-   BuisnessHours(
+  BuisnessHours(
     day: "Saturday",
-    from:"-- : --",
-    to:"-- : --",
+    from: "-- : --",
+    to: "-- : --",
   ),
-   BuisnessHours(
+  BuisnessHours(
     day: "Sunday",
-    from:"-- : --",
-    to:"-- : --",
+    from: "-- : --",
+    to: "-- : --",
   ),
-  
 ];
 
 List<String> services = [
@@ -63,5 +67,4 @@ List<String> services = [
   "Cleaner",
   "Baby Sitter",
   "Driver",
-
 ];

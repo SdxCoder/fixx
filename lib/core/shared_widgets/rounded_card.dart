@@ -6,6 +6,7 @@ class RoundedCard extends StatelessWidget {
   final double circularRadius;
   final double width;
   final double height;
+  final BorderSide borderSide;
 
   const RoundedCard({
     Key key,
@@ -13,7 +14,7 @@ class RoundedCard extends StatelessWidget {
     this.cardColor = Colors.white,
     this.circularRadius = 4.0,
     this.width,
-    this.height,
+    this.height, this.borderSide,
   }) : super(key: key);
 
   @override
@@ -25,7 +26,9 @@ class RoundedCard extends StatelessWidget {
           margin: EdgeInsets.symmetric(vertical: 8),
           elevation: 0,
           color: cardColor,
+        
           shape: RoundedRectangleBorder(
+               side: borderSide ?? BorderSide.none,
               borderRadius: BorderRadius.circular(circularRadius)),
           child: content),
     );

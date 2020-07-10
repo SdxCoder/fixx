@@ -14,6 +14,8 @@ export './models/user.dart';
 export './models/service.dart';
 export './models/employee.dart';
 export './models/buisness_hours.dart';
+export './models/booking.dart';
+export './models/notifications.dart';
 
 // shared services export
 export './shared_service/auth_service.dart';

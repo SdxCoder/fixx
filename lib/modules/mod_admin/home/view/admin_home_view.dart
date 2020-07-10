@@ -1,4 +1,7 @@
 import 'package:client/core/shared_widgets/bottom_navbar.dart';
+import 'package:client/modules/mod_admin/bookings/views/bookings.dart';
+import 'package:client/modules/mod_admin/notifications/views/notifications.dart';
+import 'package:client/modules/mod_admin/settings/views/settings.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 
@@ -14,9 +17,9 @@ class _AdminHomeViewState extends State<AdminHomeView> {
 
   List<Widget> pages = [
    Home(),
-    Text("Bookings"),
-    Text("Notifications"),
-    Text("Settings"),
+   BookingsView(),
+   NotificationsView(),
+   SettingsView(),
   ];
 
   @override

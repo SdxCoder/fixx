@@ -1,7 +1,5 @@
 import 'package:client/core/core.dart';
-import 'package:client/core/models/buisness_hours.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_modular/flutter_modular.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
 class BookingDetailView extends StatelessWidget {

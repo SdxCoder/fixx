@@ -6,7 +6,7 @@ Widget buildAppBar(
     {BuildContext context,
     Widget title,
     List<Widget> actions = const [],
-    bool centerTitle= true,
+    bool centerTitle= false,
     Widget leading,
     IconThemeData iconThemeData,
     Color backgroundColor,

@@ -19,6 +19,8 @@ class DropDownField extends StatelessWidget {
   final Color valueColor;
   final Color defaultIconColor;
 
+  final BorderSide borderSide;
+
   const DropDownField({
     Key key,
     this.title,
@@ -35,7 +37,7 @@ class DropDownField extends StatelessWidget {
     this.hintTextColor = Colors.white,
     this.prefixIconColor = Colors.white,
     this.sufixIconColor = Colors.white, 
-    this.backgrounColor, this.defaultIconColor = Colors.white,
+    this.backgrounColor, this.defaultIconColor = Colors.white, this.borderSide,
   }) : super(key: key);
   @override
   Widget build(BuildContext context) {
@@ -43,7 +45,7 @@ class DropDownField extends StatelessWidget {
       height: 48,
       decoration: BoxDecoration(
           color: this.backgrounColor ?? Colors.white.withOpacity(0.2),
-          borderRadius: BorderRadius.circular(10)),
+          borderRadius: BorderRadius.circular(4)),
       child: DropdownButtonFormField(
         value: value,
         style: Theme.of(context).textTheme.bodyText2.copyWith(
@@ -77,10 +79,13 @@ class DropDownField extends StatelessWidget {
                       color: sufixIconColor,
                     ),
                   ),
-            contentPadding: EdgeInsets.symmetric(horizontal: 8),
+            contentPadding: EdgeInsets.only(left : 16 , right: 8),
+            enabledBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(4),
+                borderSide:borderSide ?? BorderSide.none),
             border: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(10),
-                borderSide: BorderSide.none)),
+                borderRadius: BorderRadius.circular(4),
+                borderSide:borderSide ?? BorderSide.none)),
         items: collection.map<DropdownMenuItem>((value) {
           return DropdownMenuItem(value: value, child: Text(value.toString()));
         }).toList(),
