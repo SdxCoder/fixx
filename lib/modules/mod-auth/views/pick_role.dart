@@ -2,10 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
 import '../../../core/core.dart';
-import '../../../core/shared_widgets/button.dart';
-import '../../../core/shared_widgets/rounded_card.dart';
-import '../../../core/utils/appTheme.dart';
-import '../../../core/utils/appTheme.dart';
 
 class RolePickerView extends StatefulWidget {
   @override
@@ -53,6 +49,7 @@ class _RolePickerViewState extends State<RolePickerView> {
             ),
             SizedBox(height: 32),
             RoundedCardTapable(
+              width: MediaQuery.of(context).size.width,
               onTap: () {
                 _changeRole(Role.professional);
               },
@@ -79,6 +76,7 @@ class _RolePickerViewState extends State<RolePickerView> {
             ),
             SizedBox(height: 16),
             RoundedCardTapable(
+                width: MediaQuery.of(context).size.width,
               onTap: () {
                 _changeRole(Role.user);
               },

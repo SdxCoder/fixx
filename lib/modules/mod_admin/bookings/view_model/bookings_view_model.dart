@@ -47,9 +47,7 @@ class BookingsViewModel extends BaseViewModel {
   };
   
  
-  List _selectedEvents = [
-
-  ];
+  List _selectedEvents = [];
   //Slot _selectedSlot;
 
   List get selectedEvents => _selectedEvents;
