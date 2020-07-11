@@ -25,7 +25,7 @@ class BookingDetailView extends StatelessWidget {
                           leading: CircleAvatar(
                             radius: 25,
                             backgroundImage:
-                                AssetImage("placeholder_photo.jpg"),
+                                AssetImage("assets/placeholder_photo.jpg"),
                           ),
                           isThreeLine: true,
                           title: Text("CAROLINE RICHARDS",

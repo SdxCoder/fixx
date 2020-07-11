@@ -33,7 +33,7 @@ class StrikesView extends StatelessWidget {
               ListTile(
                 leading: CircleAvatar(
                   radius: 25,
-                  backgroundImage: AssetImage("placeholder_photo.jpg"),
+                  backgroundImage: AssetImage("assets/placeholder_photo.jpg"),
                 ),
                 title: Text("CAROLINE RICHARDS",
                     style: Theme.of(context).textTheme.subtitle1.copyWith(

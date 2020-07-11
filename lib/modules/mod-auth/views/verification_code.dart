@@ -31,7 +31,7 @@ class VerificationCodeView extends StatelessWidget {
             Column(
               crossAxisAlignment: CrossAxisAlignment.start, children: [
           SizedBox(
-            height: 100,
+            height: 70,
           ),
           RichText(
             text: TextSpan(

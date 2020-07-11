@@ -125,7 +125,7 @@ class _LoginViewState extends State<LoginView> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text("New Here?\t", style: Theme.of(context).textTheme.bodyText1.copyWith(
+                    Text("New Here?  ", style: Theme.of(context).textTheme.bodyText1.copyWith(
                       color:Colors.white
                     ),),
                     GestureDetector(

@@ -22,31 +22,31 @@ class SettingsView extends StatelessWidget {
               child: SingleChildScrollView(
                 child: Column(
                   children: [
-                    RoundedCard(
-                      circularRadius: 10,
-                      cardColor: AppTheme.primaryColorLight,
-                      content: Padding(
-                        padding: const EdgeInsets.all(16.0),
-                        child: ListTile(
-                          onTap: () {
-                            Modular.to.pushNamed(Routes.addEmployee);
-                          },
-                          title: Text("SERVICES",
-                              style: Theme.of(context)
-                                  .textTheme
-                                  .subtitle1
-                                  .copyWith(
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.bold,
-                                  )),
-                          trailing: Icon(
-                            Icons.arrow_forward_ios,
-                            color: AppTheme.borderColor,
-                            size: 14,
-                          ),
-                        ),
-                      ),
-                    ),
+                    // RoundedCard(
+                    //   circularRadius: 10,bu
+                    //   cardColor: AppTheme.primaryColorLight,
+                    //   content: Padding(
+                    //     padding: const EdgeInsets.all(16.0),
+                    //     child: ListTile(
+                    //       onTap: () {
+                    //         Modular.to.pushNamed(Routes.addEmployee);
+                    //       },
+                    //       title: Text("SERVICES",
+                    //           style: Theme.of(context)
+                    //               .textTheme
+                    //               .subtitle1
+                    //               .copyWith(
+                    //                 color: Colors.white,
+                    //                 fontWeight: FontWeight.bold,
+                    //               )),
+                    //       trailing: Icon(
+                    //         Icons.arrow_forward_ios,
+                    //         color: AppTheme.borderColor,
+                    //         size: 14,
+                    //       ),
+                    //     ),
+                    //   ),
+                    // ),
                     RoundedCard(
                       circularRadius: 10,
                       cardColor: AppTheme.primaryColorLight,
@@ -179,7 +179,7 @@ class SettingsView extends StatelessWidget {
                         padding: const EdgeInsets.all(16.0),
                         child: ListTile(
                           onTap: () {
-                            Modular.to.pushNamed(Routes.addEmployee);
+                            Modular.to.pushNamed(Routes.stats);
                           },
                           title: Text("STATISTICS",
                               style: Theme.of(context)
@@ -204,7 +204,7 @@ class SettingsView extends StatelessWidget {
                         padding: const EdgeInsets.all(16.0),
                         child: ListTile(
                           onTap: () {
-                            Modular.to.pushNamed(Routes.addEmployee);
+                            Modular.to.pushNamed(Routes.bankDetails);
                           },
                           title: Text("BANK DETAILS",
                               style: Theme.of(context)
@@ -229,7 +229,7 @@ class SettingsView extends StatelessWidget {
                         padding: const EdgeInsets.all(16.0),
                         child: ListTile(
                           onTap: () {
-                            Modular.to.pushNamed(Routes.addEmployee);
+                            Modular.to.pushNamed(Routes.availability);
                           },
                           title: Text("AVAILABILITY",
                               style: Theme.of(context)
