@@ -2,6 +2,7 @@ import 'package:client/modules/mod_admin/buisness_setup/views/add_employee.dart'
 import 'package:client/modules/mod_admin/buisness_setup/views/choose_service.dart';
 import 'package:client/modules/mod_admin/home/view/booking_detail.dart';
 import 'package:client/modules/mod_admin/settings/views/add_employes.dart';
+import 'package:client/modules/mod_admin/settings/views/appointment.dart';
 import 'package:client/modules/mod_admin/settings/views/availablity.dart';
 import 'package:client/modules/mod_admin/settings/views/bank_details.dart';
 import 'package:client/modules/mod_admin/settings/views/my_buisness.dart';
@@ -36,6 +37,7 @@ class AdminModule extends ChildModule {
         Router('/bankDetails', child: (_, args) => BankDetailsView()),
         Router('/stats', child: (_, args) => StatsView()),
         Router('/availability', child: (_, args) => AvailabilityView()),
+        Router('/appointment', child: (_, args) => AppointmentView()),
       ];
 
   static Inject get to => Inject<AdminModule>.of();

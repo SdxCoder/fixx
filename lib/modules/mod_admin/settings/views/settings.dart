@@ -79,7 +79,7 @@ class SettingsView extends StatelessWidget {
                         padding: const EdgeInsets.all(16.0),
                         child: ListTile(
                           onTap: () {
-                            Modular.to.pushNamed(Routes.addEmployee);
+                            Modular.to.pushNamed(Routes.appointment);
                           },
                           title: Text("APPOINTMENT",
                               style: Theme.of(context)
