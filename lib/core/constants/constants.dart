@@ -1,4 +1,6 @@
 import 'package:client/core/models/buisness_hours.dart';
+import 'package:client/core/utils/appTheme.dart';
+import 'package:flutter/material.dart';
 
 const imageUrl =
     'https://png.pngtree.com/element_our/png/20181206/users-vector-icon-png_260862.jpg';
@@ -67,4 +69,15 @@ List<String> services = [
   "Cleaner",
   "Baby Sitter",
   "Driver",
+];
+
+List<Color> colors = [
+  Colors.purple[200],
+  AppTheme.accentColor,
+  Colors.pink[200],
+  Colors.cyan[300],
+  Colors.blue[300],
+  Colors.indigo[300],
+  Colors.orange[200],
+  Colors.lightGreen[200],
 ];

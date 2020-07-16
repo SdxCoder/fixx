@@ -1,5 +1,5 @@
 import 'package:client/core/core.dart';
-import 'package:client/modules/mod_admin/bookings/view_model/bookings_view_model.dart';
+import 'package:client/modules/mod_user/home/view_model/booking_view_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
@@ -7,7 +7,6 @@ import 'package:stacked/stacked.dart';
 import 'package:table_calendar/table_calendar.dart';
 
 class BookingsView extends StatefulWidget {
-  //final Booking booking;
 
   const BookingsView({
     Key key,

@@ -4,6 +4,7 @@ class AppTheme {
   static bool isLightTheme = true;
   static Color primaryColors = HexColor("#192841");
   static Color primaryColorLight = HexColor("#2d4163");
+  static Color primaryColorTint = HexColor("#c1cfe7");
   static Color accentColor = HexColor("#EF820D");
   static Color introColor = HexColor("#f7f9fc");
   static Color borderColor = HexColor("#D3D3D3");

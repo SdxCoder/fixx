@@ -61,6 +61,7 @@ class RoundedCardTapable extends StatelessWidget {
         width: width,
         height: height,
         child: Card(
+          
           color: cardColor,
            margin: EdgeInsets.symmetric(vertical: 8,),
             elevation: 0,

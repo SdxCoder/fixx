@@ -12,6 +12,7 @@ import 'main.dart';
 import 'modules/mod-auth/views/phone_number.dart';
 import 'modules/mod-auth/views/sign_up_view.dart';
 import 'modules/mod_admin/home/view/admin_home_view.dart';
+import 'modules/mod_user/mod_user.dart';
 
 
 
@@ -36,5 +37,6 @@ class AppModule extends MainModule {
         Router("/code", child: (_, args) => VerificationCodeView()),
         Router('/forgotPassword', child: (_, args) => ForgotPasswordView()),
         Router('/adminHome', module: AdminModule()),
+        Router('/userHome', module: UserModule()),
       ];
 }

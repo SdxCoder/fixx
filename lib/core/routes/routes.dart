@@ -23,8 +23,8 @@ class Routes {
 
   // user home routes
   static const String userHome = "/userHome";
-
-  // user home
-// static const String scan = "$userHome/scan";
+   static const String chooseCategory = "$userHome/chooseCategory";
+   static const String categoryDetails = "$userHome/categoryDetails";
+   static const String categoryServices = "$userHome/categoryServices";
 
 }

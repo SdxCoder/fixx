@@ -11,10 +11,11 @@ Widget buildAppBar(
     IconThemeData iconThemeData,
     Color backgroundColor,
     bool automaticallyImplyLeading = false,
+    double elevation = 4.0,
     PreferredSizeWidget bottom
    }) {
   return AppBar(
-    elevation: 0.0,
+    elevation: elevation,
     backgroundColor: backgroundColor,
     title: title,
     centerTitle: centerTitle,

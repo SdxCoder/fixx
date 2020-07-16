@@ -39,6 +39,6 @@ class AdminModule extends ChildModule {
         Router('/availability', child: (_, args) => AvailabilityView()),
         Router('/appointment', child: (_, args) => AppointmentView()),
       ];
-
+      
   static Inject get to => Inject<AdminModule>.of();
 }
