@@ -45,7 +45,7 @@ class _CategoryServicesViewState extends State<CategoryServicesView> {
                           "NEXT",
                         ),
                         onPressed: () async {
-                          Modular.to.pushNamed(Routes.categoryServices);
+                          Modular.to.pushNamed(Routes.bookAppointment);
                         }),
                   ),
               ],

@@ -23,8 +23,10 @@ class Routes {
 
   // user home routes
   static const String userHome = "/userHome";
-   static const String chooseCategory = "$userHome/chooseCategory";
-   static const String categoryDetails = "$userHome/categoryDetails";
-   static const String categoryServices = "$userHome/categoryServices";
-
+  static const String chooseCategory = "$userHome/chooseCategory";
+  static const String categoryDetails = "$userHome/categoryDetails";
+  static const String categoryServices = "$userHome/categoryServices";
+  static const String bookAppointment = "$userHome/bookAppointment";
+  static const String orderSummary = "$userHome/orderSummary";
+  static const String orderConfrimed = "$userHome/orderConfrimed";
 }

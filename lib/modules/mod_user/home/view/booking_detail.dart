@@ -2,22 +2,20 @@ import 'package:client/core/core.dart';
 import 'package:client/modules/mod_user/home/view_model/booking_view_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-
 import 'package:stacked/stacked.dart';
 import 'package:table_calendar/table_calendar.dart';
 
-class BookingsView extends StatefulWidget {
-
-  const BookingsView({
+class BookAppointmentView extends StatefulWidget {
+  const BookAppointmentView({
     Key key,
   }) : super(key: key);
   @override
-  BookingsViewViewState createState() => BookingsViewViewState();
+  BookAppointmentViewState createState() => BookAppointmentViewState();
 }
 
-class BookingsViewViewState extends State<BookingsView> {
+class BookAppointmentViewState extends State<BookAppointmentView> {
   CalendarController _calendarController;
-  Booking _selectedBooking = Booking();
+  String _selectedSlot = "";
 
   @override
   initState() {
@@ -41,8 +39,9 @@ class BookingsViewViewState extends State<BookingsView> {
       builder: (context, BookingsViewModel model, child) => Scaffold(
         appBar: buildAppBar(
           context: context,
+          automaticallyImplyLeading: true,
           backgroundColor: Colors.transparent,
-          title: Text("Bookings"),
+          title: Text("Book Appointment"),
         ),
         body: SafeArea(
           child: Padding(
@@ -95,6 +94,22 @@ class BookingsViewViewState extends State<BookingsView> {
                     : Expanded(
                         child: _buildEventList(model),
                       ),
+                SizedBox(
+                  height: 20,
+                ),
+                    model.selectedEvents.isEmpty
+                    ? Offstage() :
+                SizedBox(
+                  height: 48,
+                  width: MediaQuery.of(context).size.width,
+                  child: raisedButton(
+                    btnText: "Next",
+                    btnColor: AppTheme.accentColor,
+                    onPressed: () {
+                      Modular.to.pushNamed(Routes.orderSummary);
+                    },
+                  ),
+                ),
               ],
             ),
           ),
@@ -103,7 +118,7 @@ class BookingsViewViewState extends State<BookingsView> {
     );
   }
 
-  Widget _selectedBookingWidget(Booking b) {
+  Widget _selectedBookingWidget(String b) {
     return RoundedCard(
       circularRadius: 5,
       borderSide: BorderSide(
@@ -112,26 +127,7 @@ class BookingsViewViewState extends State<BookingsView> {
       cardColor: AppTheme.accentColor.withOpacity(0.1),
       content: Padding(
         padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 16),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(b.customerName, style: Theme.of(context).textTheme.caption),
-            SizedBox(height: 4),
-            Text(b.serviceName, style: Theme.of(context).textTheme.caption),
-            Text(b.duration, style: Theme.of(context).textTheme.caption),
-            Align(
-              alignment: Alignment.bottomRight,
-              child: SizedBox(
-                height: 30,
-                child: raisedButton(
-                  btnText: "Cancel",
-                  btnColor: AppTheme.accentColor,
-                  onPressed: () {},
-                ),
-              ),
-            )
-          ],
-        ),
+        child: Center(child: Text(b, style: Theme.of(context).textTheme.caption)),
       ),
     );
   }
@@ -147,18 +143,13 @@ class BookingsViewViewState extends State<BookingsView> {
             children: [
               ...model.selectedEvents
                   .map<Widget>((b) => ListTile(
-                        leading: Text(b.slot.format(context).padLeft(8, "0"),
-                            style: Theme.of(context)
-                                .textTheme
-                                .caption
-                                .copyWith(fontWeight: FontWeight.bold)),
                         title: GestureDetector(
                           onTap: () {
                             setState(() {
-                              _selectedBooking = b;
+                              _selectedSlot = b;
                             });
                           },
-                          child: _selectedBooking.slot == b.slot
+                          child: _selectedSlot == b
                               ? _selectedBookingWidget(b)
                               : RoundedCard(
                                   circularRadius: 5,
@@ -166,125 +157,38 @@ class BookingsViewViewState extends State<BookingsView> {
                                   content: Padding(
                                     padding: const EdgeInsets.symmetric(
                                         vertical: 8.0, horizontal: 16),
-                                    child: Column(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: [
-                                        Text(b.customerName,
-                                            style: Theme.of(context)
-                                                .textTheme
-                                                .caption),
-                                      ],
+                                    child: Center(
+                                      child: Text(b,
+                                          style: Theme.of(context)
+                                              .textTheme
+                                              .caption),
                                     ),
                                   ),
                                 ),
                         ),
                       ))
                   .toList(),
-              ListTile(
-                leading: Offstage(),
-                title: SizedBox(
-                  width: MediaQuery.of(context).size.width,
-                  height: 48,
-                  child: Padding(
-                    padding: const EdgeInsets.only(left: 16.0),
-                    child: raisedButton(
-                      btnText: "Book Appointment",
-                      btnColor: AppTheme.accentColor,
-                      onPressed: () async {
-                        await showBookAppointmentDialog();
-                      },
-                    ),
-                  ),
-                ),
-              ),
+              // ListTile(
+              //   leading: Offstage(),
+              //   title: SizedBox(
+              //     width: MediaQuery.of(context).size.width,
+              //     height: 48,
+              //     child: Padding(
+              //       padding: const EdgeInsets.only(left: 16.0),
+              //       child: raisedButton(
+              //         btnText: "Book Appointment",
+              //         btnColor: AppTheme.accentColor,
+              //         onPressed: () async {
+              //           await showBookAppointmentDialog();
+              //         },
+              //       ),
+              //     ),
+              //   ),
+              // ),
             ],
           ),
         ),
       ),
     );
-  }
-
-  Future showBookAppointmentDialog() {
-    return showDialog(
-        context: Modular.navigatorKey.currentState.overlay.context,
-        builder: (context) => Dialog(
-              backgroundColor: Theme.of(context).primaryColor,
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(8)),
-              child: Container(
-                width: 500,
-                margin: EdgeInsets.all(16),
-                child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      Text(
-                        "BOOK AN APPOINTMENT",
-                        style: Theme.of(context).textTheme.headline6,
-                      ),
-                      SizedBox(
-                        height: 32,
-                      ),
-                      RoundedCard(
-                        cardColor: AppTheme.primaryColorLight,
-                        content: Padding(
-                          padding: const EdgeInsets.all(16.0),
-                          child: Column(
-                            children: [
-                              TextFieldCustom(
-                                backgroundColor: Colors.transparent,
-                                hintText: "Customer Name",
-                                prefixIconData: Icons.email,
-                              ),
-                              SizedBox(
-                                height: 8,
-                              ),
-                              DropDownField(
-                                valueColor: AppTheme.borderColor,
-                                hintTextColor: AppTheme.borderColor,
-                                onChanged: (value) {},
-                                collection: ["Blow Dry", "Make Up"],
-                                dropDownColor: AppTheme.primaryColorLight,
-                                borderSide: BorderSide(
-                                    color: AppTheme.borderColor, width: 0.2),
-                                hintText: "Select Service",
-                                backgrounColor: Colors.transparent,
-                                defaultIconColor: AppTheme.accentColor,
-                                value: null,
-                              ),
-                              SizedBox(
-                                height: 8,
-                              ),
-                              DropDownField(
-                                valueColor: AppTheme.borderColor,
-                                hintTextColor: AppTheme.borderColor,
-                                onChanged: (value) {},
-                                collection: ["09:00am", "10:00am"],
-                                dropDownColor: AppTheme.primaryColorLight,
-                                borderSide: BorderSide(
-                                    color: AppTheme.borderColor, width: 0.2),
-                                hintText: "Select Time",
-                                backgrounColor: Colors.transparent,
-                                defaultIconColor: AppTheme.accentColor,
-                                value: null,
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                      SizedBox(
-                        height: 20,
-                      ),
-                      Center(
-                        child: raisedButton(
-                            widget: Text("BOOK APPOINTMENT"),
-                            onPressed: () {
-                              Modular.to.pop();
-                            }),
-                      ),
-                    ]),
-              ),
-            ));
   }
 }

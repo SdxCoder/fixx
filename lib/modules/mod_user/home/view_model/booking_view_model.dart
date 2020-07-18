@@ -1,42 +1,21 @@
 
-import 'package:client/core/core.dart';
-import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
 
 class BookingsViewModel extends BaseViewModel {
   DateTime _selectedDate = DateTime.now();
   Map<DateTime, List<dynamic>> _events = {
     DateTime.now().add(Duration(days: 1)): [
-      Booking(
-          slot: TimeOfDay(hour: 9, minute: 30),
-          customerName: "Delia Massay",
-          serviceName: "Hairdo",
-          duration: "2 hours"),
-      Booking(
-          slot: TimeOfDay(hour: 10, minute: 30),
-          customerName: "Valdro",
-          serviceName: "Blow dry",
-          duration: "1 hour"),
-      Booking(
-          slot: TimeOfDay(hour: 11, minute: 30),
-          customerName: "Nina",
-          serviceName: "Make up",
-          duration: "2 hours"),
-      Booking(
-          slot: TimeOfDay(hour: 12, minute: 30),
-          customerName: "Delia Massay",
-          serviceName: "Hairdo",
-          duration: "2 hours"),
-      Booking(
-          slot: TimeOfDay(hour: 13, minute: 30),
-          customerName: "Delia Massay",
-          serviceName: "Hairdo",
-          duration: "2 hours"),
-      Booking(
-          slot: TimeOfDay(hour: 14, minute: 30),
-          customerName: "Delia Massay",
-          serviceName: "Hairdo",
-          duration: "2 hours"),
+     "09:30 am - 10:30 pm",
+     "09:30 am - 10:31 pm",
+     "09:30 am - 10:32 pm",
+     "09:30 am - 10:33 pm",
+     "09:30 am - 10:34 pm",
+     "09:30 am - 10:35 pm",
+     "09:30 am - 10:36 pm",
+     "09:30 am - 10:37 pm",
+     "09:30 am - 10:38 pm",
+     "09:30 am - 10:39 pm",
+     "09:30 am - 10:40 pm",
     ]
   };
 
