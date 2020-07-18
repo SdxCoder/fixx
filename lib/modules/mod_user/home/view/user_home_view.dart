@@ -2,6 +2,7 @@ import 'package:client/core/shared_widgets/bottom_navbar.dart';
 import 'package:client/modules/mod_admin/bookings/views/bookings.dart';
 import 'package:client/modules/mod_admin/notifications/views/notifications.dart';
 import 'package:client/modules/mod_admin/settings/views/settings.dart';
+import 'package:client/modules/mod_user/bookings/views/mybookings.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 
@@ -17,7 +18,7 @@ class _UserHomeViewState extends State<UserHomeView> {
 
   List<Widget> pages = [
    Home(),
-   BookingsView(),
+   MyBookingsView(),
    NotificationsView(),
    SettingsView(),
   ];

@@ -7,6 +7,7 @@ class Booking{
   final String serviceName;
   final String duration;
   final TimeOfDay slot;
+  final String status;
 
-  Booking( {this.slot,this.customerName, this.serviceName, this.duration});
+  Booking( {this.status, this.slot,this.customerName, this.serviceName, this.duration});
 }

@@ -22,6 +22,12 @@ class NotificationType {
   static String completed = "completed";
 }
 
+
+class BookingsType {
+  static String upcoming = "upcoming";
+  static String past = "past";
+}
+
 List<BuisnessHours> businessHoursList = [
   BuisnessHours(
     day: "Monday",
