@@ -17,27 +17,31 @@ class EditProfileView extends StatelessWidget {
                 padding: const EdgeInsets.all(16),
                 child: Column(
                   children: [
-                    SizedBox(
-                      height: MediaQuery.of(context).size.width * 0.4,
-                      child: RoundedCard(
-                        circularRadius: 10,
-                        cardColor: AppTheme.primaryColorLight,
-                        content: Stack(
-                          children: [
-                            Image.asset(
-                              "assets/profile_image.png",
-                              fit: BoxFit.cover,
-                            ),
-                            Positioned(
-                                bottom: 0,
-                                right: 0,
-                                child: IconButton(
-                                    icon: Icon(Icons.camera_alt),
-                                    onPressed: () {
-                                      // Open Camera
-                                    }))
-                          ],
-                        ),
+                    RoundedCard(
+                      circularRadius: 10,
+                      cardColor: AppTheme.primaryColorLight,
+                      width: MediaQuery.of(context).size.width * 0.4,
+                      content: Stack(
+                        children: [
+                          Container(
+                            height: MediaQuery.of(context).size.width * 0.4,
+                            decoration: BoxDecoration(
+                                color: Colors.transparent,
+                                borderRadius: BorderRadius.circular(10),
+                                image: DecorationImage(
+                                    fit: BoxFit.cover,
+                                    image: AssetImage(
+                                        "assets/profile_image.png"))),
+                          ),
+                          Positioned(
+                              bottom: 0,
+                              right: 0,
+                              child: IconButton(
+                                  icon: Icon(Icons.camera_alt),
+                                  onPressed: () {
+                                    // Open Camera
+                                  }))
+                        ],
                       ),
                     ),
                     Text(

@@ -14,7 +14,7 @@ class MyBookingsView extends StatelessWidget {
         appBar: buildAppBar(
             context: context,
             backgroundColor: Colors.transparent,
-            title: Text("MY Bookings"),
+            title: Text("My Bookings"),
             actions: [IconButton(icon: Icon(Icons.search), onPressed: () {})]),
         body: SafeArea(
           child: Padding(
@@ -47,21 +47,15 @@ class MyBookingsView extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         children: [
           SizedBox(height:16),
-          Divider(
-            color: AppTheme.borderColor,
-             height: 0,
-          ),
+       
           Text(
             "UP COMIMNG",
             style: Theme.of(context)
                 .textTheme
-                .caption
+                .bodyText1
                 .copyWith(fontWeight: FontWeight.bold),
           ),
-          Divider(
-            color: AppTheme.borderColor,
-            height: 0,
-          ),
+         
           SizedBox(height: 16),
           ListTile(
             leading: CircleAvatar(
@@ -130,21 +124,15 @@ class MyBookingsView extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         children: [
          SizedBox(height:16),
-          Divider(
-            color: AppTheme.borderColor,
-             height: 0,
-          ),
+        
           Text(
             "PAST",
             style: Theme.of(context)
                 .textTheme
-                .caption
+                .bodyText1
                 .copyWith(fontWeight: FontWeight.bold),
           ),
-          Divider(
-            color: AppTheme.borderColor,
-            height: 0,
-          ),
+        
           SizedBox(height: 16),
           ListTile(
             leading: CircleAvatar(

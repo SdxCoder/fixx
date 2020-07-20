@@ -7,7 +7,6 @@ import 'package:flutter_icons/flutter_icons.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
-
 class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -121,11 +120,18 @@ class Home extends StatelessWidget {
                       circularRadius: 10,
                       onTap: () {},
                       cardColor: Colors.transparent,
+                      width: MediaQuery.of(context).size.width * 0.4,
+                      height: MediaQuery.of(context).size.width * 0.3,
                       content: Stack(
                         children: [
-                          Image.asset(
-                            "assets/visited_yoga.jpg",
-                            fit: BoxFit.cover,
+                          Container(
+                            decoration: BoxDecoration(
+                                color: Colors.transparent,
+                                borderRadius: BorderRadius.circular(10),
+                                image: DecorationImage(
+                                    fit: BoxFit.cover,
+                                    image:
+                                        AssetImage("assets/visited_yoga.jpg"))),
                           ),
                           Positioned(
                               top: 0,
@@ -139,7 +145,6 @@ class Home extends StatelessWidget {
                     Text("SALON NAME",
                         style: Theme.of(context).textTheme.subtitle1.copyWith(
                             color: Colors.white, fontWeight: FontWeight.bold)),
-                  
                     RatingBar(
                       onRatingChanged: (v) {},
                       initialRating: 4,
@@ -152,7 +157,6 @@ class Home extends StatelessWidget {
                       halfFilledColor: Colors.amberAccent,
                       size: 14,
                     ),
-                   
                   ],
                 ),
               ),

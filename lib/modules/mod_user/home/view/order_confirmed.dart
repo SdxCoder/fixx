@@ -1,5 +1,6 @@
 import 'package:client/core/core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_modular/flutter_modular.dart';
 
 class OrderConfirmedView extends StatelessWidget {
   @override
@@ -29,7 +30,9 @@ class OrderConfirmedView extends StatelessWidget {
             child: raisedButton(
               btnText: "OK GOT IT",
               btnColor: AppTheme.accentColor,
-              onPressed: () {},
+              onPressed: () {
+                Modular.to.pushNamedAndRemoveUntil(Routes.userHome, (route) => false);
+              },
             ),
           ),
             SizedBox(

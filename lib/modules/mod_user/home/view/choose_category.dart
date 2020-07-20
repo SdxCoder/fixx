@@ -7,17 +7,11 @@ class ChooseCategoryView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: buildAppBar(
-        automaticallyImplyLeading: true,
-       
-        context: context,
-        backgroundColor: Colors.transparent,
-        title: Text("Choose Salon"), // pass string value based on selection
-        actions: [
-          IconButton(icon: Icon(Icons.sort), onPressed: (){
-            
-          })
-        ]
-      ),
+          automaticallyImplyLeading: true,
+          context: context,
+          backgroundColor: Colors.transparent,
+          title: Text("Choose Salon"), // pass string value based on selection
+          actions: [IconButton(icon: Icon(Icons.sort), onPressed: () {})]),
       body: SafeArea(
         child: Padding(
             padding: const EdgeInsets.all(16.0),
@@ -39,7 +33,7 @@ class ChooseCategoryView extends StatelessWidget {
       itemCount: 4,
       itemBuilder: (BuildContext context, int index) {
         return RoundedCardTapable(
-          onTap: (){
+          onTap: () {
             Modular.to.pushNamed(Routes.categoryDetails);
           },
           cardColor: AppTheme.primaryColorLight,
@@ -47,7 +41,7 @@ class ChooseCategoryView extends StatelessWidget {
           content: Row(
             children: [
               Flexible(
-                flex: 3,
+                flex: 5,
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: ListTile(
@@ -61,10 +55,8 @@ class ChooseCategoryView extends StatelessWidget {
                       children: [
                         Text(
                           "4.9/5.0 (1229)",
-                          style: Theme.of(context)
-                              .textTheme
-                              .bodyText1
-                              .copyWith(height: 1.7, fontWeight: FontWeight.bold),
+                          style: Theme.of(context).textTheme.bodyText1.copyWith(
+                              height: 1.7, fontWeight: FontWeight.bold),
                         ),
                         Text(
                           "1.4KM Away",
@@ -76,11 +68,20 @@ class ChooseCategoryView extends StatelessWidget {
                 ),
               ),
               Flexible(
-                  flex: 2,
-                  child: Image.asset(
-                    "assets/visited_yoga.jpg",
-                    fit: BoxFit.cover,
-                  ))
+                flex: 3,
+                child: Container(
+                  height: 100,
+                  decoration: BoxDecoration(
+                      color: Colors.transparent,
+                      borderRadius: BorderRadius.only(
+                        bottomRight: Radius.circular(10),
+                        topRight: Radius.circular(10),
+                      ),
+                      image: DecorationImage(
+                          fit: BoxFit.cover,
+                          image: AssetImage("assets/visited_yoga.jpg"))),
+                ),
+              )
             ],
           ),
         );

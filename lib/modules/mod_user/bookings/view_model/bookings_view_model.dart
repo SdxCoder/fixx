@@ -11,6 +11,12 @@ class MyBookingsViewModel extends BaseViewModel {
     Booking(
       status: BookingsType.past
     ),
+     Booking(
+      status: BookingsType.upcoming
+    ),
+    Booking(
+      status: BookingsType.past
+    ),
    
   ];
 }

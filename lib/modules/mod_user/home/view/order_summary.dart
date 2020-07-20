@@ -27,12 +27,13 @@ class OrderSummaryView extends StatelessWidget {
                       Text(
                         "WEDNESDAY, MARCH 15TH",
                         style: Theme.of(context).textTheme.bodyText1.copyWith(
-                            color: Colors.white, fontWeight: FontWeight.bold),
+                            color: Colors.white, fontWeight: FontWeight.bold, ),
                       ),
                       Text(
                         "08:30 am",
                         style: Theme.of(context).textTheme.caption.copyWith(
                               color: AppTheme.accentColor,
+                              height: 1.7171
                             ),
                       ),
                       Text("123 5th Avenue",
