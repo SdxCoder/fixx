@@ -15,110 +15,119 @@ class _RolePickerViewState extends State<RolePickerView> {
   void _changeRole(String role) {
     setState(() {
       _role = role;
+      role = role;
     });
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: 
-      Center(
-        child:  Padding(
+      body: Center(
+        child: Padding(
           padding: const EdgeInsets.all(16.0),
-          child:!_chooseRoleScreen ? _chooseAuth() :
-              Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-            SizedBox(
-              height: MediaQuery.of(context).size.height * 0.2,
-            ),
-            Padding(
-              padding: const EdgeInsets.only(left: 8.0),
-              child: Text(
-                "You are !",
-                style: Theme.of(context)
-                    .textTheme
-                    .headline5
-                    .copyWith(fontWeight: FontWeight.bold),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(left: 8.0),
-              child: Text(
-                "Tell us about youself to specify\nyour account.",
-                style: Theme.of(context).textTheme.bodyText2,
-              ),
-            ),
-            SizedBox(height: 32),
-            RoundedCardTapable(
-              width: MediaQuery.of(context).size.width,
-              onTap: () {
-                _changeRole(Role.professional);
-              },
-              cardColor: _role == Role.professional
-                  ? Theme.of(context).accentColor
-                  : AppTheme.primaryColorLight,
-              content: Padding(
-                padding: const EdgeInsets.all(16.0),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      "I'M A PROFESSIONAL",
-                      style: Theme.of(context).textTheme.bodyText1.copyWith(
-                          fontWeight: FontWeight.bold, color: Colors.white),
+          child: !_chooseRoleScreen
+              ? _chooseAuth()
+              : Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                  SizedBox(
+                    height: MediaQuery.of(context).size.height * 0.2,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 8.0),
+                    child: Text(
+                      "You are !",
+                      style: Theme.of(context)
+                          .textTheme
+                          .headline5
+                          .copyWith(fontWeight: FontWeight.bold),
                     ),
-                    Text(
-                      "Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.",
-                      style: Theme.of(context).textTheme.caption,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 8.0),
+                    child: Text(
+                      "Tell us about youself to specify\nyour account.",
+                      style: Theme.of(context).textTheme.bodyText2,
                     ),
-                  ],
-                ),
-              ),
-            ),
-            SizedBox(height: 16),
-            RoundedCardTapable(
-                width: MediaQuery.of(context).size.width,
-              onTap: () {
-                _changeRole(Role.user);
-              },
-              cardColor: _role == Role.user
-                  ? Theme.of(context).accentColor
-                  : AppTheme.primaryColorLight,
-              content: Padding(
-                padding: const EdgeInsets.all(16.0),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      "I'M A USER",
-                      style: Theme.of(context).textTheme.bodyText1.copyWith(
-                          fontWeight: FontWeight.bold, color: Colors.white),
+                  ),
+                  SizedBox(height: 32),
+                  RoundedCardTapable(
+                    width: MediaQuery.of(context).size.width,
+                    onTap: () {
+                      _changeRole(Role.professional);
+                    },
+                    cardColor: _role == Role.professional
+                        ? Theme.of(context).accentColor
+                        : AppTheme.primaryColorLight,
+                    content: Padding(
+                      padding: const EdgeInsets.all(16.0),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            "I'M A PROFESSIONAL",
+                            style: Theme.of(context)
+                                .textTheme
+                                .bodyText1
+                                .copyWith(
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.white),
+                          ),
+                          Text(
+                            "Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.",
+                            style: Theme.of(context).textTheme.caption,
+                          ),
+                        ],
+                      ),
                     ),
-                    Text(
-                      "Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.",
-                      style: Theme.of(context).textTheme.caption,
+                  ),
+                  SizedBox(height: 16),
+                  RoundedCardTapable(
+                    width: MediaQuery.of(context).size.width,
+                    onTap: () {
+                      _changeRole(Role.user);
+                    },
+                    cardColor: _role == Role.user
+                        ? Theme.of(context).accentColor
+                        : AppTheme.primaryColorLight,
+                    content: Padding(
+                      padding: const EdgeInsets.all(16.0),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            "I'M A USER",
+                            style: Theme.of(context)
+                                .textTheme
+                                .bodyText1
+                                .copyWith(
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.white),
+                          ),
+                          Text(
+                            "Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.",
+                            style: Theme.of(context).textTheme.caption,
+                          ),
+                        ],
+                      ),
                     ),
-                  ],
-                ),
-              ),
-            ),
-            SizedBox(
-              height: MediaQuery.of(context).size.height * 0.2,
-            ),
-            Center(
-              child: SizedBox(
-                width: MediaQuery.of(context).size.width * 0.5,
-                height: 48,
-                child: raisedButton(
-                  btnText: 'Continue',
-                  onPressed: () {
-                    setState(() {
-                      _chooseRoleScreen = false;
-                    });
-                  },
-                ),
-              ),
-            )
-          ]),
+                  ),
+                  SizedBox(
+                    height: MediaQuery.of(context).size.height * 0.2,
+                  ),
+                  Center(
+                    child: SizedBox(
+                      width: MediaQuery.of(context).size.width * 0.5,
+                      height: 48,
+                      child: raisedButton(
+                        btnText: 'Continue',
+                        onPressed: () {
+                          setState(() {
+                            _chooseRoleScreen = false;
+                          });
+                        },
+                      ),
+                    ),
+                  )
+                ]),
         ),
       ),
     );
@@ -127,48 +136,53 @@ class _RolePickerViewState extends State<RolePickerView> {
   Widget _chooseAuth() {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.center,
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
-         SizedBox(
-            height: MediaQuery.of(context).size.height * 0.2,
+      
+        Padding(
+          padding: const EdgeInsets.only(left: 8.0),
+          child: Text(
+            "Looking for a booking",
+            style: Theme.of(context)
+                .textTheme
+                .headline4
+                .copyWith(fontWeight: FontWeight.bold),
           ),
-           Padding(
-            padding: const EdgeInsets.only(left: 8.0),
-            child: Text(
-              "Looking for a booking",
-              style: Theme.of(context)
-                  .textTheme
-                  .headline5
-                  .copyWith(fontWeight: FontWeight.bold),
-            ),
+        ),
+        SizedBox(
+            width: MediaQuery.of(context).size.width,
+            height: MediaQuery.of(context).size.height * 0.5,
+            child: Image.asset(
+              "assets/sign_in.png",
+              fit: BoxFit.cover,
+            )),
+        SizedBox(
+          width: MediaQuery.of(context).size.width * 0.5,
+          height: 48,
+          child: raisedButton(
+            btnText: 'Sign In',
+            onPressed: () {
+              Modular.to.pushNamed(Routes.login);
+            },
           ),
-           SizedBox(
-            height: MediaQuery.of(context).size.height * 0.3,
+        ),
+        SizedBox(
+          height: 16,
+        ),
+        SizedBox(
+          width: MediaQuery.of(context).size.width * 0.5,
+          height: 48,
+          child: raisedButton(
+            btnColor: AppTheme.primaryColorLight,
+            btnText: 'Sign Up',
+            onPressed: () {
+              Modular.to.pushNamed(Routes.signup);
+            },
           ),
-          SizedBox(
-              width: MediaQuery.of(context).size.width * 0.5,
-              height: 48,
-              child: raisedButton(
-                btnText: 'Sign In',
-                onPressed: () {
-                  Modular.to.pushNamed(Routes.login);
-                },
-              ),
-            ),
-            SizedBox(height: 16,),
-            SizedBox(
-              width: MediaQuery.of(context).size.width * 0.5,
-              height: 48,
-
-              child: raisedButton(
-                btnColor: AppTheme.primaryColorLight,
-                btnText: 'Sign Up',
-                onPressed: () {
-                  Modular.to.pushNamed(Routes.signup);
-                },
-              ),
-            ),
-
-
+        ),
+        SizedBox(
+          height: 20,
+        ),
       ],
     );
   }

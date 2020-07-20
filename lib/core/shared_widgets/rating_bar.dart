@@ -83,18 +83,16 @@ class _RatingBarState extends State<RatingBar> {
 
   @override
   Widget build(BuildContext context) {
-    return Align(
-          child: Row(
+    return Row(
         mainAxisSize: MainAxisSize.min,
         children: List.generate(widget.maxRating, (index) {
-          return Builder(
-            builder: (rowContext) => widget._readOnly
-                ? buildIcon(context, index + 1)
-                : buildStar(rowContext, index + 1),
-          );
-        }),
-      ),
+    return Builder(
+      builder: (rowContext) => widget._readOnly
+          ? buildIcon(context, index + 1)
+          : buildStar(rowContext, index + 1),
     );
+        }),
+      );
   }
 
   Widget buildIcon(BuildContext context, int position) {

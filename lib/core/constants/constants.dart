@@ -5,6 +5,9 @@ import 'package:flutter/material.dart';
 const imageUrl =
     'https://png.pngtree.com/element_our/png/20181206/users-vector-icon-png_260862.jpg';
 
+
+String role = Role.user;
+
 class Role {
   static String professional = "Professional";
   static String user = "User";

@@ -63,62 +63,7 @@ class _AddServiceViewState extends State<AddServiceView> {
                             backgroundColor: Colors.transparent,
                             hintText: "Description",
                           ),
-                          // ListTile(
-                          //   title: Text("Buisness Name",
-                          //       style: Theme.of(context).textTheme.bodyText1),
-                          //   subtitle: Text("Salon Name",
-                          //       style: Theme.of(context)
-                          //           .textTheme
-                          //           .caption
-                          //           .copyWith(
-                          //               fontWeight: FontWeight.bold,
-                          //               color: Colors.white)),
-                          // ),
-                          // Divider(
-                          //   color: Theme.of(context).primaryColor,
-                          // ),
-                          // ListTile(
-                          //   title: Text("Address",
-                          //       style: Theme.of(context).textTheme.bodyText1),
-                          //   subtitle: Text("30 Expansion apt.39",
-                          //       style: Theme.of(context)
-                          //           .textTheme
-                          //           .caption
-                          //           .copyWith(
-                          //               fontWeight: FontWeight.bold,
-                          //               color: Colors.white)),
-                          // ),
-                          // Divider(
-                          //   color: Theme.of(context).primaryColor,
-                          // ),
-                          // ListTile(
-                          //   title: Text("Telephone Number",
-                          //       style: Theme.of(context).textTheme.bodyText1),
-                          //   subtitle: Text("623-123-098",
-                          //       style: Theme.of(context)
-                          //           .textTheme
-                          //           .caption
-                          //           .copyWith(
-                          //               fontWeight: FontWeight.bold,
-                          //               color: Colors.white)),
-                          // ),
-                          // Divider(
-                          //   color: Theme.of(context).primaryColor,
-                          // ),
-                          // ListTile(
-                          //   title: Text("Description",
-                          //       style: Theme.of(context).textTheme.bodyText1),
-                          //   subtitle: Text("salon description and details",
-                          //       style: Theme.of(context)
-                          //           .textTheme
-                          //           .caption
-                          //           .copyWith(
-                          //               fontWeight: FontWeight.bold,
-                          //               color: Colors.white)),
-                          // ),
-                          // Divider(
-                          //   color: Theme.of(context).primaryColor,
-                          // ),
+                       
                         ],
                       ),
                     ),

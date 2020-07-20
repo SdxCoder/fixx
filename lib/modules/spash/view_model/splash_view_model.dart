@@ -9,10 +9,10 @@ class SplashViewModel extends BaseViewModel {
   
     await Future.delayed(Duration(seconds: 3));
     if (true) {
-     
-      Modular.to.pushReplacementNamed(Routes.userHome);
+      // navigate based on role to user home or admin home
+      Modular.to.pushReplacementNamed(Routes.intro);
     } else {
-      Modular.to.pushReplacementNamed(Routes.selectRole);
+      Modular.to.pushReplacementNamed(Routes.intro);
     }
   }
 

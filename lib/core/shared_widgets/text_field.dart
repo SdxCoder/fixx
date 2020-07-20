@@ -21,6 +21,7 @@ class TextFieldCustom extends StatefulWidget {
   final Color sufixIconColor;
   final Widget prefixWidget;
   final TextInputType inputType;
+  final bool obscureText;
 
   const TextFieldCustom({
     Key key,
@@ -39,7 +40,7 @@ class TextFieldCustom extends StatefulWidget {
     this.cursorColor =const Color(0xffd3d3d3),
     this.textColor = const Color(0xffd3d3d3),
     this.prefixIconColor = const Color(0xffd3d3d3),
-    this.sufixIconColor =const Color(0xffd3d3d3), this.prefixWidget, this.inputType = TextInputType.text,
+    this.sufixIconColor =const Color(0xffd3d3d3), this.prefixWidget, this.inputType = TextInputType.text, this.obscureText = false,
   }) : super(key: key);
 
   @override
@@ -55,6 +56,7 @@ class _TextFieldState extends State<TextFieldCustom> {
         borderRadius: BorderRadius.circular(4),
       ),
       child: TextFormField(
+        obscureText: widget.obscureText,
         keyboardType: widget.inputType,
         focusNode: widget.focusNode,
         validator: widget.validator,

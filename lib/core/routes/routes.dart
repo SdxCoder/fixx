@@ -1,5 +1,6 @@
 class Routes {
   static const String selectRole = "/selectRole";
+  static const String intro = "/intro";
   static const String login = "/login";
   static const String signup = "/signup";
   static const String forgotPassword = "/forgotPassword";
@@ -29,4 +30,7 @@ class Routes {
   static const String bookAppointment = "$userHome/bookAppointment";
   static const String orderSummary = "$userHome/orderSummary";
   static const String orderConfrimed = "$userHome/orderConfrimed";
+  static const String editAccount = "$userHome/editAccount";
+  static const String userStrikes = "$userHome/userStrikes";
+  static const String userNotifications = "$userHome/userNotifications";
 }

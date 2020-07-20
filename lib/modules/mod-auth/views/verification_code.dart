@@ -78,7 +78,9 @@ class VerificationCodeView extends StatelessWidget {
                 ),
               ),
               onCompleted: (String value) {
-                Modular.to.pushNamed(Routes.chooseService);
+                 (role == Role.professional) ? Modular.to.pushReplacementNamed(Routes.chooseService) 
+                          : Modular.to.pushReplacementNamed(Routes.userHome); 
+               
               },
               onEditing: (bool value) {
                

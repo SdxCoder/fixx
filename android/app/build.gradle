@@ -52,6 +52,7 @@ android {
         versionName "1"
     }
 
+
         signingConfigs {
        release {
            keyAlias keystoreProperties['keyAlias']

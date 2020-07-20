@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_icons/flutter_icons.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 import 'package:stacked/stacked.dart';
@@ -116,7 +115,10 @@ class _LoginViewState extends State<LoginView> {
                         widget: Text(
                           "Login",
                         ),
-                        onPressed: () async {}),
+                        onPressed: () async {
+                          (role == Role.professional) ? Modular.to.pushReplacementNamed(Routes.adminHome) 
+                          : Modular.to.pushReplacementNamed(Routes.userHome); 
+                        }),
                   ),
                 ),
                 SizedBox(

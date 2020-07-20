@@ -23,7 +23,9 @@ class Home extends StatelessWidget {
                   iconSize: 25,
                   color: Theme.of(context).accentColor,
                   icon: Icon(FontAwesome.bell_o),
-                  onPressed: () {},
+                  onPressed: () {
+                    Modular.to.pushNamed(Routes.userNotifications);
+                  },
                 )
               ],
             ),
